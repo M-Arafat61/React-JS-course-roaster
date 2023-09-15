@@ -8,6 +8,7 @@ function App() {
   const [courseInfo, setCourseInfo] = useState([]);
   const [credit, setCredit] = useState(0);
   const [remaining, setRemaining] = useState(20);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const handleSelect = course => {
     const isExist = courseInfo.find(
@@ -16,7 +17,7 @@ function App() {
     let prevCredit = course?.credit;
 
     if (isExist) {
-      return alert("ddd");
+      return;
     }
     const remainingHour = remaining - prevCredit;
     if (remainingHour >= 0) {
@@ -24,15 +25,26 @@ function App() {
     }
 
     if (!isExist && credit >= 20) {
-      return alert("nn");
+      return;
     }
+
+    // total price
+    let prevPrice = course?.price;
+    courseInfo.forEach(coursePrice => {
+      prevPrice += coursePrice.price;
+    });
+    setTotalPrice(prevPrice);
+
+    // copying each course to courseInfo
     setCourseInfo([...courseInfo, course]);
+
+    // total credit
     courseInfo.forEach(item => {
-      // prevCredit += item.credit;
       prevCredit += item.credit;
     });
     if (prevCredit !== 0 && prevCredit <= 20) {
-      return setCredit(prevCredit);
+      setCredit(prevCredit);
+      return;
     }
   };
 
@@ -62,6 +74,7 @@ function App() {
             courseInfo={courseInfo}
             credit={credit}
             remaining={remaining}
+            totalPrice={totalPrice}
           ></Cart>
         </div>
       </div>
