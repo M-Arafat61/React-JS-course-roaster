@@ -10,4 +10,6 @@
 
 #
 
-- ## Project features
+- ## State management of the project
+
+## I have included 4 `useState() hook` in the project _course registration_. Below contains states with explanations.
