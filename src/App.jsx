@@ -15,7 +15,6 @@ function App() {
     } else {
       setCourseInfo([...courseInfo, course]);
     }
-    // console.log(course);
   };
   // fetch json
   useEffect(() => {
