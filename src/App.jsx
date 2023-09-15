@@ -91,8 +91,8 @@ function App() {
       <h1 className="text-[#1C1B1B] text-2xl font-bold tracking-wide text-center pt-10 pb-10">
         Course Registration
       </h1>
-      <div className="flex">
-        <div className="w-3/4 grid grid-cols-3 gap-5 p-5 ">
+      <div className="flex flex-col-reverse md:flex-row">
+        <div className="md:w-3/4 grid grid-cols-1 md:grid-cols-3 gap-5 p-5 ">
           {courses.map(course => (
             <Course
               key={course.id}
@@ -101,7 +101,7 @@ function App() {
             ></Course>
           ))}
         </div>
-        <div className="w-1/4 p-5 ">
+        <div className="md:w-1/4 p-5 ">
           <Cart
             courseInfo={courseInfo}
             credit={credit}

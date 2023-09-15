@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Cart = ({ courseInfo, credit, remaining, totalPrice }) => {
   // const [credit, setCredit] = useState(0);
   return (
-    <div className="space-y-5">
+    <div className="space-y-2 text-center md:space-y-5 ">
       <div>
         <h3 className="text-[#2F80ED] font-bold text-xl">
           Credit Hour Remaining {remaining} hr
@@ -15,7 +15,7 @@ const Cart = ({ courseInfo, credit, remaining, totalPrice }) => {
       <div>
         <h1 className="text-black font-bold pb-5 text-xl">Course Name </h1>
         {courseInfo.map((info, idx) => (
-          <p key={info.id}>
+          <p className="text-lg" key={info.id}>
             {(idx = idx + 1)}. {info.title}
           </p>
         ))}
