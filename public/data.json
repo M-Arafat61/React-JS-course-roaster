@@ -4,7 +4,7 @@
     "title": "Introduction to C Programming",
     "description": "C is a versatile, high-level programming language known for its efficiency and portability.",
     "img": "https://i.imgur.com/hAZyjSz.png",
-    "price": 15000,
+    "price": 1500,
     "credit": 1
   },
   {
@@ -12,7 +12,7 @@
     "title": "Introduction to Algorithms",
     "description": "Algorithms are step-by-step procedures for solving problems efficiently.",
     "img": "https://i.imgur.com/8hme19z.png",
-    "price": 25000,
+    "price": 2500,
     "credit": 2
   },
   {
@@ -20,7 +20,7 @@
     "title": "Introduction to C++ for DSA",
     "description": "C++ enhances data structure and algorithm implementations in computer science.",
     "img": "https://i.imgur.com/KCe3L30.png",
-    "price": 10000,
+    "price": 1000,
     "credit": 10
   },
   {
@@ -28,7 +28,7 @@
     "title": "Basic Data Structures",
     "description": "Arrays, lists, stacks, queues, trees, graphs are fundamental data structures.",
     "img": "https://i.imgur.com/rJM9Oyn.png",
-    "price": 35000,
+    "price": 3500,
     "credit": 5
   },
   {
@@ -36,7 +36,7 @@
     "title": "Introduction to OOP Python",
     "description": "Python's OOP supports classes, objects, inheritance, and polymorphism for organizing code.",
     "img": "https://i.imgur.com/ATLgTVL.png",
-    "price": 19000,
+    "price": 1900,
     "credit": 5
   },
   {
@@ -44,7 +44,7 @@
     "title": "Software Engineering",
     "description": "Designing, building, and maintaining software systems efficiently and reliably.",
     "img": "https://i.imgur.com/8kNej0U.png",
-    "price": 23000,
+    "price": 2300,
     "credit": 2
   },
   {
@@ -52,7 +52,7 @@
     "title": "AWS, Cloud Computing",
     "description": "Amazon Web Services (AWS) provides cloud computing services, enabling scalability, flexibility.",
     "img": "https://i.imgur.com/VJo2UwY.png",
-    "price": 35000,
+    "price": 3500,
     "credit": 5
   },
   {
@@ -60,7 +60,7 @@
     "title": "Database (MySQL)",
     "description": "MySQL is a popular relational database management system for data storage.",
     "img": "https://i.imgur.com/7rSiE6k.png",
-    "price": 19000,
+    "price": 1900,
     "credit": 5
   },
   {
@@ -68,7 +68,7 @@
     "title": "Problem-Solving Part",
     "description": "Identify, analyze, design, and implement solutions using programming skills effectively.",
     "img": "https://i.imgur.com/1lbjCM2.png",
-    "price": 23000,
+    "price": 2300,
     "credit": 2
   }
 ]
