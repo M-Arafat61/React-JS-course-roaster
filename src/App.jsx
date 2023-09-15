@@ -7,27 +7,22 @@ function App() {
   const [courses, setCourses] = useState([]);
   const [courseInfo, setCourseInfo] = useState([]);
   const [credit, setCredit] = useState(0);
+  const [remaining, setRemaining] = useState(20);
 
   const handleSelect = course => {
     const isExist = courseInfo.find(
       courseTitle => courseTitle.title == course.title
     );
     let prevCredit = course?.credit;
-    // if (isExist) {
-    //   return alert("already added");
-    // } else {
-    //   setCourseInfo([...courseInfo, course]);
-    //   courseInfo.forEach(item => {
-    //     // prevCredit += item.credit;
-    //     prevCredit += item.credit;
-    //   });
-    //   if (prevCredit !== 0 && prevCredit <= 20) {
-    //     return setCredit(prevCredit);
-    //   }
-    // }
+
     if (isExist) {
       return alert("ddd");
     }
+    const remainingHour = remaining - prevCredit;
+    if (remainingHour >= 0) {
+      setRemaining(remainingHour);
+    }
+
     if (!isExist && credit >= 20) {
       return alert("nn");
     }
@@ -63,7 +58,11 @@ function App() {
           ))}
         </div>
         <div className="w-1/4 p-5">
-          <Cart courseInfo={courseInfo} credit={credit}></Cart>
+          <Cart
+            courseInfo={courseInfo}
+            credit={credit}
+            remaining={remaining}
+          ></Cart>
         </div>
       </div>
     </div>
