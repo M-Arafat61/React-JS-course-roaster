@@ -101,7 +101,7 @@ function App() {
             ></Course>
           ))}
         </div>
-        <div className="md:w-1/4 p-5 ">
+        <div className="md:w-1/4 p-5">
           <Cart
             courseInfo={courseInfo}
             credit={credit}
