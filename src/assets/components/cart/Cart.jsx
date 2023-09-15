@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
+// import { useState } from "react";
 
-const Cart = ({ courseInfo }) => {
+const Cart = ({ courseInfo, credit }) => {
+  // const [credit, setCredit] = useState(0);
   return (
     <div>
       <h3>Credit Hour Remaining hr</h3>
@@ -12,10 +14,9 @@ const Cart = ({ courseInfo }) => {
           {(idx = idx + 1)}. {info.title}
         </p>
       ))}
-      <h1>Course Name</h1>
 
       <hr className="flex border border-gray-400 " />
-      <h3>Total Credit Hour : </h3>
+      <h3>Total Credit Hour : {credit}</h3>
       <hr className="flex border border-gray-400 " />
       <h3>Total Price : USD</h3>
     </div>
@@ -23,5 +24,6 @@ const Cart = ({ courseInfo }) => {
 };
 Cart.propTypes = {
   courseInfo: PropTypes.array.isRequired,
+  credit: PropTypes.number,
 };
 export default Cart;

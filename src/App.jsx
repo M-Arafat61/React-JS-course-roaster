@@ -6,16 +6,41 @@ function App() {
   // use state for data.json
   const [courses, setCourses] = useState([]);
   const [courseInfo, setCourseInfo] = useState([]);
+  const [credit, setCredit] = useState(0);
+
   const handleSelect = course => {
     const isExist = courseInfo.find(
       courseTitle => courseTitle.title == course.title
     );
+    let prevCredit = course?.credit;
+    // if (isExist) {
+    //   return alert("already added");
+    // } else {
+    //   setCourseInfo([...courseInfo, course]);
+    //   courseInfo.forEach(item => {
+    //     // prevCredit += item.credit;
+    //     prevCredit += item.credit;
+    //   });
+    //   if (prevCredit !== 0 && prevCredit <= 20) {
+    //     return setCredit(prevCredit);
+    //   }
+    // }
     if (isExist) {
-      return alert("already added");
-    } else {
-      setCourseInfo([...courseInfo, course]);
+      return alert("ddd");
+    }
+    if (!isExist && credit >= 20) {
+      return alert("nn");
+    }
+    setCourseInfo([...courseInfo, course]);
+    courseInfo.forEach(item => {
+      // prevCredit += item.credit;
+      prevCredit += item.credit;
+    });
+    if (prevCredit !== 0 && prevCredit <= 20) {
+      return setCredit(prevCredit);
     }
   };
+
   // fetch json
   useEffect(() => {
     fetch("data.json")
@@ -23,6 +48,7 @@ function App() {
       .then(data => setCourses(data));
   }, []);
   // console.log(courses);
+
   return (
     <div>
       <h1>Course Registration</h1>
@@ -37,7 +63,7 @@ function App() {
           ))}
         </div>
         <div className="w-1/4 p-5">
-          <Cart courseInfo={courseInfo}></Cart>
+          <Cart courseInfo={courseInfo} credit={credit}></Cart>
         </div>
       </div>
     </div>
