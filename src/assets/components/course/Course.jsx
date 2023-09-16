@@ -7,22 +7,23 @@ const Course = ({ course, handleSelect }) => {
       <div className="flex justify-center">
         <img src={img} />
       </div>
-      <div className="pt-5 pl-5 pr-5 ">
+      <div className=" pt-5 pl-5 pr-5 ">
         <h2 className="text-[#1C1B1B] text-base font-semibold tracking-tight">
           {title}
         </h2>
         <p className="text-gray-500 text-sm tracking-tighter">{description}</p>
-        <div className="flex justify-between items-center pt-5 pb-5">
-          <div className="flex">
-            <img src="/public/dollar.svg" alt="" />
-            <p>Price: {price}</p>
-          </div>
-          <div className="flex">
-            <img src="/public/book.svg" alt="" />
-            <p>Credit: {credit}hr</p>
-          </div>
+      </div>
+      <div className="mt-auto pt-3 pb-3 flex justify-center gap-5">
+        <div className="flex">
+          <img src="/dollar.svg" alt="" />
+          <p>Price: {price}</p>
+        </div>
+        <div className="flex">
+          <img src="/book.svg" alt="" />
+          <p>Credit: {credit}hr</p>
         </div>
       </div>
+
       <div
         className="mt-auto text-center bg-blue-400 rounded-xl
        text-white text-xl tracking-tighter font-semibold "
