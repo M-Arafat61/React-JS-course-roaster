@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Cart = ({ courseInfo, credit, remaining, totalPrice }) => {
   // const [credit, setCredit] = useState(0);
   return (
-    <div className="space-y-2 text-center md:space-y-5 ">
+    <div className="space-y-2 text-center md:space-y-5 top-5 sticky">
       <div>
         <h3 className="text-[#2F80ED] font-bold text-xl">
           Credit Hour Remaining {remaining} hr

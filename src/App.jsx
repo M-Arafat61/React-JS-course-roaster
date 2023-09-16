@@ -19,7 +19,7 @@ function App() {
     );
 
     if (isExist) {
-      return toast.warn("Course is already added", {
+      return toast.warn("This course is already added!", {
         style: {
           color: "black",
           fontSize: "20px",
@@ -100,7 +100,7 @@ function App() {
             ></Course>
           ))}
         </div>
-        <div className="md:w-1/4 p-5">
+        <div className="md:w-1/4 p-5 ">
           <Cart
             courseInfo={courseInfo}
             credit={credit}
