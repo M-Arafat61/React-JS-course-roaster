@@ -36,7 +36,7 @@ function App() {
       });
     }
     let prevCredit = course?.credit;
-
+    // console.log(prevCredit);
     const remainingHour = remaining - prevCredit;
     // remaining hour validation
     if (remainingHour >= 0) {
@@ -52,9 +52,9 @@ function App() {
     if (!isExist && prevCredit > 20) {
       return toast.warn("See if total credit exceeds or not!", {
         style: {
-          color: "black",
+          color: "white",
           fontSize: "20px",
-          backgroundColor: "cyan",
+          backgroundColor: "indigo",
         },
         position: "top-center",
         autoClose: 4000,
@@ -67,15 +67,14 @@ function App() {
       });
     }
 
+    // copying each course to courseInfo
+    setCourseInfo([...courseInfo, course]);
     // total price
     let prevPrice = course?.price;
     courseInfo.forEach(coursePrice => {
       prevPrice += coursePrice.price;
     });
     setTotalPrice(prevPrice);
-
-    // copying each course to courseInfo
-    setCourseInfo([...courseInfo, course]);
   };
 
   // fetch json
