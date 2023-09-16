@@ -50,11 +50,11 @@ function App() {
       setCredit(prevCredit);
     }
     if (!isExist && prevCredit > 20) {
-      return toast.warn("See if total credit exceeds or not!", {
+      return toast.error("See if total credit exceeds or not!", {
         style: {
           color: "white",
           fontSize: "20px",
-          backgroundColor: "indigo",
+          backgroundColor: "blue",
         },
         position: "top-center",
         autoClose: 4000,
