@@ -1,6 +1,6 @@
 # Course Registration
 
-#### [Course Registration Live](delicious-pan.surge.sh)
+### [Course Registration Live](delicious-pan.surge.sh)
 
 - ## Project features
 
